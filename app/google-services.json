@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "803123409928",
+    "firebase_url": "https://doanchuyennganh-5c6eb-default-rtdb.firebaseio.com",
+    "project_id": "doanchuyennganh-5c6eb",
+    "storage_bucket": "doanchuyennganh-5c6eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803123409928:android:48aa452222e021195d8dbd",
+        "android_client_info": {
+          "package_name": "com.example.doanchuyennganh"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyDtJcd3m_hR0i9Zz3NP2u-HlduIki0iI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803123409928:android:19ce19bfcf22b3025d8dbd",
+        "android_client_info": {
+          "package_name": "com.example.serverdoancn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyDtJcd3m_hR0i9Zz3NP2u-HlduIki0iI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

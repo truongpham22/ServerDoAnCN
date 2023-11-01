@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="Sảnh"
+        android:icon="@drawable/icon_home"/>
+    <item
+        android:id="@+id/nav_cart"
+        android:title="GIỏ hàng"
+        android:icon="@drawable/icon_cart"/>
+    <item
+        android:id="@+id/nav_info"
+        android:title="Tôi"
+        android:icon="@drawable/icon_info"/>
+</menu>
