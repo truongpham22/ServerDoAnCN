@@ -139,7 +139,7 @@ public class OrderActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                item.setStatus(String.valueOf(spinner.getSelectedItemPosition()));
+                item.setStatus(String.valueOf(spinner.getSelectedItemPosition())); // Cập nhật trạng thái đơn hàng từ item trong spinner
                 requests.child(localKey).setValue(item);
                 orderAdapter.notifyDataSetChanged();
             }
