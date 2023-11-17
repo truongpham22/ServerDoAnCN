@@ -1,6 +1,8 @@
 package com.example.serverdoancn.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +12,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.serverdoancn.Activity.OrderDetail;
 import com.example.serverdoancn.R;
 import com.example.serverdoancn.model.CurrentUser;
 import com.example.serverdoancn.model.Request;
@@ -47,7 +52,20 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
         holder.txtStatus.setText(convertStatus(request.getStatus()));
         holder.txtPhone.setText(request.getPhone());
         holder.txtAddress.setText(request.getAddress());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToDetailOrder(request);
+            }
 
+            private void goToDetailOrder(Request request) {
+                Intent intent = new Intent(context, OrderDetail.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("obj_request", request);
+                intent.putExtras(bundle);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -71,9 +89,11 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
 
     public static class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener{
         public TextView txtKey, txtAddress, txtStatus, txtPhone;
+        public CardView cardView;
 
         public OrderViewHolder(@NonNull View itemView) {
             super(itemView);
+            cardView = itemView.findViewById(R.id.layout_cart);
             txtKey = itemView.findViewById(R.id.txtKeyO);
             txtAddress = itemView.findViewById(R.id.txtAddressO);
             txtStatus = itemView.findViewById(R.id.txtStatus);

@@ -1,8 +1,9 @@
 package com.example.serverdoancn.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Request {
+public class Request implements Serializable {
     private String name;
     private String phone;
     private String address;
@@ -18,12 +19,14 @@ public class Request {
     }
 
     private String key;
+    private List<Order> foods;
 
-    public Request(String name, String phone, String address, String total) {
+    public Request(String name, String phone, String address, String total, List<Order> foods) {
         this.name = name;
         this.phone = phone;
         this.address = address;
         this.total = total;
+        this.foods = foods;
         this.key = key;
         this.status = "0";
     }
@@ -66,6 +69,14 @@ public class Request {
 
     public void setTotal(String total) {
         this.total = total;
+    }
+
+    public List<Order> getFoods() {
+        return foods;
+    }
+
+    public void setFoods(List<Order> foods) {
+        this.foods = foods;
     }
 
     public Request() {

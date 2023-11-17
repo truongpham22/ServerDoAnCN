@@ -24,5 +24,7 @@
             android:exported="true"/>
         <activity android:name=".fragment.OrderActivity"
             android:exported="true"/>
+        <activity android:name=".Activity.OrderDetail"
+            android:exported="true"/>
     </application>
 </manifest>
